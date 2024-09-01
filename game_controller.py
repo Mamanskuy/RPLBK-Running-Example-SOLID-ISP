@@ -9,18 +9,18 @@ class GameController:
         print(self.game.start())
         while True:
             try:
-                user_guess = int(input("Enter your guess: "))
+                user_guess = int(input("Tebak Angkanya Sob!: "))
                 result = self.game.guess(user_guess)
                 print(result)
-                if result.startswith("Congratulations"):
+                if result.startswith("Keren Sob!"):
                     break
-                print(f"Attempts: {self.statistics.get_attempts()}")
+                print(f"Percobaan: {self.statistics.get_attempts()}")
             except ValueError:
-                print("Invalid input. Please enter a number.")
+                print("Harus Masukin Angka Sob!.")
     
     def show_stats(self):
-        print(f"Total attempts: {self.statistics.get_attempts()}")
-        print(f"Last result: {self.statistics.get_last_result()}")
+        print(f"Total Percobaan: {self.statistics.get_attempts()}")
+        print(f"Hasil Akhir: {self.statistics.get_last_result()}")
 
 #_________________#
 #Alman Kamal Mahdi#
